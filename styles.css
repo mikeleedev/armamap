@@ -1,0 +1,71 @@
+/* Remove extra margin/padding and force full viewport */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Space Mono', monospace;
+  background: linear-gradient(45deg, #001100, #000a0a),
+    repeating-linear-gradient(0deg,
+      rgba(0, 255, 0, 0.05) 0px,
+      rgba(0, 255, 0, 0.05) 2px,
+      transparent 2px,
+      transparent 4px);
+  color: var(--neon-green);
+}
+
+/* Main container fills the viewport */
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  transition: transform 0.3s ease;
+}
+
+#map {
+  flex: 1;
+  position: relative;
+}
+
+/* Hover coordinate overlay */
+#coordsOverlay {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  color: #fff;
+  z-index: 2000;
+  font-family: monospace;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  #coordsOverlay {
+    display: none !important;
+    /* Hide coordinate overlay on mobile */
+  }
+}
+
+.custom-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: green; /* Change as needed */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid white;
+}
+
+.marker-text {
+    position: relative;
+    z-index: 10;
+}

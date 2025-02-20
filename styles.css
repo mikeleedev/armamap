@@ -50,20 +50,24 @@ body {
 }
 
 .custom-marker {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: green; /* Change as needed */
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 2px solid white;
 }
+
+/* Define reusable color classes */
+.marker-red { background-color: red; }
+.marker-green { background-color: green; }
+.marker-blue { background-color: blue; }
 
 .marker-text {
     position: relative;

@@ -43,7 +43,7 @@ map.on('mousemove', function (e) {
 map.on('click', function(e){
   L.popup()
         .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
+        .setContent(`${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}`)
         .openOn(map);
 });
 
@@ -60,7 +60,10 @@ window.addEventListener('resize', function () {
 // L.marker([59.519549, 54.825]).addTo(map)
 var markers = [
   { loc: [59.519549, 54.825], text: '600' },
-  { loc: [60.66552, 55.044505], text: '400' }
+  { loc: [60.66552, 55.044505], text: '400' },
+  { loc: [60.334414, 55.422802], text: '500' },
+  { loc: [69.113, 57.933], text: '500' },
+  { loc: [68.551866, 48.225824], text: '500' }
   //{ lat: 51.515, lng: -0.08, text: 'C' }
 ];
 
@@ -70,7 +73,7 @@ markers.forEach(markerData => {
     className: 'custom-marker',
     html: `<div class="marker-text">${markerData.text}</div>`,
     iconSize: [30, 30],
-    iconAnchor: [20, 40]
+    iconAnchor: [20, 20]
   });
 
   L.marker(markerData.loc, { icon: customIcon }).addTo(map);

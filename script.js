@@ -14,10 +14,14 @@ var customCRS = L.extend({}, L.CRS.Simple, {
 // init the map.
 var map = L.map('map', {
   crs: customCRS,
-  minZoom: -5,
-  maxZoom: 5,
-  center: [coordHeight / 2, coordWidth / 2],
-  zoom: 0
+  minZoom: -3,
+  maxZoom: 2,
+  center: [coordHeight / 2, coordWidth / 2], // start centered
+  zoom: -2, // start more zoomed out
+  scrollWheelZoom: true, // Enable scroll wheel zoom
+  zoomSnap: 0.01, // Allows finer zoom levels instead of whole numbers
+  zoomDelta: 0.1, // Reduces zoom level change per scroll
+  wheelDebounceTime: 50 // Adjusts scroll event delay (lower = smoother)
  });
 
 // define the image bounds.

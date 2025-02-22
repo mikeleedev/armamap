@@ -57,15 +57,6 @@ window.addEventListener('resize', function () {
   map.invalidateSize();
 });
 
-var markers = [
-  { loc: [59.519549, 54.825], text: '600', color: 'green' },
-  { loc: [60.66552, 55.044505], text: '400' },
-  { loc: [60.334414, 55.422802], text: '500' },
-  { loc: [69.113, 57.933], text: '500' },
-  { loc: [68.551866, 48.225824], text: '500' }
-  //{ lat: 51.515, lng: -0.08, text: 'C' }
-];
-
 // iterate markers and create
 markers.forEach(markerData => {
   var markerColor = markerData.color || 'blue';

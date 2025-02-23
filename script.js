@@ -18,10 +18,10 @@ var map = L.map('map', {
   maxZoom: 2,
   center: [coordHeight / 2, coordWidth / 2], // start centered
   zoom: -2, // start more zoomed out
-  scrollWheelZoom: true, // Enable scroll wheel zoom
-  zoomSnap: 0.01, // Allows finer zoom levels instead of whole numbers
-  zoomDelta: 0.1, // Reduces zoom level change per scroll
-  wheelDebounceTime: 50 // Adjusts scroll event delay (lower = smoother)
+  // scrollWheelZoom: true, // Enable scroll wheel zoom
+  // zoomSnap: 0.01, // Allows finer zoom levels instead of whole numbers
+  // zoomDelta: 0.1, // Reduces zoom level change per scroll
+  // wheelDebounceTime: 50 // Adjusts scroll event delay (lower = smoother)
  });
 
 // define the image bounds.
@@ -47,7 +47,8 @@ map.on('mousemove', function (e) {
 map.on('click', function(e){
   L.popup()
         .setLatLng(e.latlng)
-        .setContent(`${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}`)
+        //.setContent(`${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}`)
+        .setContent(`{ loc: [${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}], text: 'xxx' },`)
         .openOn(map);
 });
 

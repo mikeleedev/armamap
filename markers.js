@@ -73,7 +73,7 @@ var markers = [
     // Lamentin (right)
     { loc: [60.197, 12.297], text: '550' },
     // south of Pinewood Lake
-    { loc: [57.741, 48.058], text: '9999', color: 'green' },
+    { loc: [57.741, 48.058], text: '9998', color: 'green' },
     // Provins
     { loc: [59.767, 55.096], text: '550' },
     { loc: [59.307, 55.689], text: '550' },

@@ -22,7 +22,8 @@ jobs:
         run: |
           rm -rf mikeleedev.github.io/armamap
           mkdir -p mikeleedev.github.io/armamap
-          cp -r * mikeleedev.github.io/armamap
+          shopt -s extglob
+          cp -r !(mikeleedev.github.io) mikeleedev.github.io/armamap
 
       - name: Commit and push changes
         run: |

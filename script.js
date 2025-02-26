@@ -46,12 +46,33 @@ map.on('mousemove', function (e) {
   document.getElementById('coordsOverlay').innerText = pad3(x) + "," + pad3(y);
 });
 
-map.on('click', function(e){
+map.on('click', function(e) {
+  const content = `{ loc: [${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}], text: '000', color: 'red' },`;
+
+  const popupContent = document.createElement('div');
+  const codeElement = document.createElement('code');
+  codeElement.textContent = content;
+
+  const copyButton = document.createElement('button');
+  copyButton.textContent = '📋';
+  copyButton.style.marginLeft = '3px';
+
+  // Add click event listener to copy text
+  copyButton.addEventListener('click', function() {
+      navigator.clipboard.writeText(content).then(() => {
+        map.closePopup();
+      }).catch(err => {
+          console.error('Error copying text:', err);
+      });
+  });
+
+  popupContent.appendChild(codeElement);
+  popupContent.appendChild(copyButton);
+
   L.popup()
-        .setLatLng(e.latlng)
-        //.setContent(`${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}`)
-        .setContent(`{ loc: [${e.latlng.lat.toFixed(3)}, ${e.latlng.lng.toFixed(3)}], text: 'xxx' },`)
-        .openOn(map);
+      .setLatLng(e.latlng)
+      .setContent(popupContent)
+      .openOn(map);
 });
 
 document.addEventListener('touchstart', function (e) {

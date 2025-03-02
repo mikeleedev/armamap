@@ -7,7 +7,7 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: 'Space Mono', monospace;
-  background: #9fc0c9;
+  background: #9fc0c9; #updated
 }
 
 /* Main container fills the viewport */

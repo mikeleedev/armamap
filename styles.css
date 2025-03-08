@@ -7,7 +7,6 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: 'Space Mono', monospace;
-  background: #9fc0c9; #updated
 }
 
 /* Main container fills the viewport */
@@ -21,6 +20,7 @@ body {
 #map {
   flex: 1;
   position: relative;
+  background: #9fc0c9;
 }
 
 /* Hover coordinate overlay */

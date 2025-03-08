@@ -93,9 +93,9 @@ markers.forEach(markerData => {
   var customIcon = L.divIcon({
     className: markerClass,
     html: `<div class="marker-text">${markerData.text}</div>`,
-    iconSize: [30, 30],
-    iconAnchor: [15, 15],
-    popupAnchor: [0, -15]
+    iconSize: [28, 28],
+    iconAnchor: [14, 14],
+    popupAnchor: [0, -14]
   });
 
   L.marker(markerData.loc, { icon: customIcon }).addTo(map);

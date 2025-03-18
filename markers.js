@@ -90,7 +90,7 @@ var markers = [
     // Laruns
     { loc: [54.611, 75.094], text: '550' },
     // southwest supply depot
-    { loc: [44.613, 69.130], text: '9999' },
+    { loc: [44.613, 69.130], text: '9999', color: 'green' },
     // Levie
     { loc: [46.996, 75.015], text: '930' },
     { loc: [46.196, 74.884], text: '685' },

@@ -1,0 +1,21 @@
+# recursively ignore everything
+/**
+
+# include directories
+!*/
+
+# exclude any IDE folders
+.idea/
+
+# include
+!.gitignore
+!Dockerfile
+!README.md
+!CHANGELOG.md
+!CNAME
+!*.html
+!*.png
+!*.js
+!*.css
+
+
